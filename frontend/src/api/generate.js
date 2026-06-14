@@ -1,5 +1,5 @@
 import axios from "axios";
-const B = "http://localhost:8000";
+const B = import.meta.env.VITE_API_URL || "http://localhost:8000";
 const p = (url, data) => axios.post(`${B}${url}`, data).then(r => r.data);
 
 export const api = {
